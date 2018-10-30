@@ -1,24 +1,21 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+--------------------------------------------------
+BETTER MOTHER F*CKING WEBSITE PROJECT
+--------------------------------------------------
 
-Things you may want to cover:
+Le site en ligne est [ici](https://bapuch.github.io/better-motherfuckingwebsite.github.io/)
 
-* Ruby version
+## Exercice du Mardi 30 Octobre - Forms :sunny:
 
-* System dependencies
+### Greetings
 
-* Configuration
+<p>Dear moussaillon,</p>
+<p>Attaché à ce repo se trouve l'app i-love-forms</strong></p>
+Tu trouvereas [ici](https://bapuch.github.io/better-motherfuckingwebsite.github.io/) le version online de l'application
 
-* Database creation
+### Travail réalisé par :
+Noms | Pseudo Slack
+------------ | -------------
+Maëlle Ngachili|@Maëlle
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Bonne correction ! :poop:
