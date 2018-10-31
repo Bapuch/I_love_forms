@@ -20,8 +20,9 @@ Maëlle Ngachili|@Maëlle
 --------------------------------------------------
 ### Notes :
 
-Pour les formulaires, la version active est celle du HTML
+Pour les formulaires, la version active est celle du HTML.
 
-Pour la changer il suffit de copier coller l'une des autres version mises en commentaire dans la section non commentée
+Pour la changer il suffit de copier coller l'une des autres version mises en commentaire dans la section non commentée.
+
 --------------------------------------------------
 ### Bonne correction ! :poop:
