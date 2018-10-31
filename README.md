@@ -11,13 +11,13 @@ Attaché à ce repo se trouve l'app <strong>i-love-forms</strong>
 
 Tu trouveras [ici](https://i-luv-forms.herokuapp.com/) la version online de l'application sur Heroku
 
-### Travail réalisé par :
+### Travail réalisé par
 --------------------------------------------------
 Noms | Pseudo Slack
 ------------ | -------------
 Maëlle Ngachili|@Maëlle
 
-### Notes :
+### Notes
 --------------------------------------------------
 
 Pour les formulaires, la version active est celle du HTML.
