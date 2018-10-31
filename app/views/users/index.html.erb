@@ -1,0 +1,29 @@
+<header class="card-header bg-primary border-bottom border-white">
+  <ul class="nav nav-tabs card-header-tabs">
+    <%= link_to "Form", new_path, class: "nav-link text-light" %>
+    <%= link_to "Users List", users_path, class: "nav-link active text-primary" %>
+  </ul>
+</header>
+<div class='card-body border border-primary rounded m-2 p-3'>
+  <h2 class="text-capitalize font-weight-bold text-dark">list of users</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+      <th scope="col" class="text-info">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Biography</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <th scope="row" class="text-info"><%= user.id %></th>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td><%= user.bio %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
