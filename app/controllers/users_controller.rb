@@ -21,4 +21,8 @@ class UsersController < ApplicationController
     end
     redirect_to new_path
   end
+
+  def index
+    @users = User.all
+  end
 end
