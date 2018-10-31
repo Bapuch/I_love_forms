@@ -1,8 +1,8 @@
 
 --------------------------------------------------
-## Exercice du Mardi 30 Octobre - I :heart: Forms
+## ![Image of form](https://static1.squarespace.com/static/56e33390b6aa60415bb5ff39/5809fefde6f2e17965f5e1e7/5809ff17e6f2e17965f5e24c/1477056904764/Forms-button.jpg?format=300w)
 
-![Image of form](https://www.google.fr/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjqz7LFrq_eAhUQExoKHUqXDbQQjRx6BAgBEAU&url=https%3A%2F%2Fwww.prime-physio.com%2Fforms%2F&psig=AOvVaw3Xi5_4YpB9Py-A_BhsUY26&ust=1541030044960411)
+## Exercice du Mardi 30 Octobre - I :heart: Forms
 
 ### Greetings
 
@@ -17,5 +17,9 @@ Tu trouvereas [ici](https://i-luv-forms.herokuapp.com/) la version online de l'a
 Noms | Pseudo Slack
 ------------ | -------------
 Maëlle Ngachili|@Maëlle
+--------------------------------------------------
+### Notes :
+Pour les formulaires, la version active est celle du HTML
+Pour la changer il suffit de copier coller l'une des autres version mises en commentaire dans la section non commentée
 --------------------------------------------------
 ### Bonne correction ! :poop:

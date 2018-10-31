@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    if params[:user][:username].nil?
+    if params[:user].nil?
       # pour le form_for
       @user = User.new('username' => params[:name], 'email' => params[:email], 'bio' => params[:bio])
     else

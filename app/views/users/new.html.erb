@@ -6,6 +6,141 @@
   <div class="row justify-content-center">
     <div class="d-flex justify-content-between">
       <div class='col-xs-6 col-sm-10 col-md-10 col-lg-10 col-xl-10'>
+        <form action='/create/' method='POST' class="form-group">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light text-muted" id="basic-addon1">Name*</span>
+            </div>
+            <input id='name' type='text' name='name' class="form-control" placeholder="Rick Sanchez">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light text-muted" id="basic-addon1">@email</span>
+            </div>
+            <input id='email' type='text' name='email' class="form-control" placeholder="jerry@duckduckbirdie.com"><br>
+          </div>
+          <small id="emailHelp" class="form-text text-danger">* Make sure to provide at least a name to create a valid user</small>
+          <br>
+        </div>
+        <div class="d-flex align-items-center">
+          <div>
+          <input type='submit' value='submit' class='btn btn-outline-primary btn-lg'>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class='col-xs-6 col-sm-12 col-md-10 col-lg-8 col-xl-8'>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-light text-muted">Bio</span>
+        </div>
+        <textarea id='bio' name='bio' class="form-control" aria-label="bio" rows="5" placeholder="wubba lubba dub dub"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NORMAL VERSION ###########################################################################################################
+<div class="jumbotron card text-center bg-dark">
+  <h1 class='card-title text-light text-capitalize font-weight-bold'>create a brand new user</h1>
+  <p class='lead font-italic text-info'>Provide the requested information</p>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="d-flex justify-content-between">
+      <div class='col-xs-6 col-sm-10 col-md-10 col-lg-10 col-xl-10'>
+        <form action='/create/' method='POST' class="form-group">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light text-muted" id="basic-addon1">Name*</span>
+            </div>
+            <input id='name' type='text' name='name' class="form-control" placeholder="Rick Sanchez">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light text-muted" id="basic-addon1">@email</span>
+            </div>
+            <input id='email' type='text' name='email' class="form-control" placeholder="jerry@duckduckbirdie.com"><br>
+          </div>
+          <small id="emailHelp" class="form-text text-danger">* Make sure to provide at least a name to create a valid user</small>
+          <br>
+        </div>
+        <div class="d-flex align-items-center">
+          <div>
+          <input type='submit' value='submit' class='btn btn-outline-primary btn-lg'>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class='col-xs-6 col-sm-12 col-md-10 col-lg-8 col-xl-8'>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-light text-muted">Bio</span>
+        </div>
+        <textarea id='bio' name='bio' class="form-control" aria-label="bio" rows="5" placeholder="wubba lubba dub dub"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- FORM TAGS VERSION ###########################################################################################################
+<div class="jumbotron card text-center bg-dark">
+  <h1 class='card-title text-light text-capitalize font-weight-bold'>create a brand new user</h1>
+  <p class='lead font-italic text-info'>Provide the requested information</p>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="d-flex justify-content-between">
+      <div class='col-xs-6 col-sm-10 col-md-10 col-lg-10 col-xl-10'>
+        <%= form_tag url_for(action: 'create'), method: 'post', class: "form-group" do |f| %>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-light text-muted" id="basic-addon1">Name*</span>
+          </div>
+          <%= text_field_tag 'name', @user.username, class: "form-control", placeholder: "Rick Sanchez"%>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-light text-muted" id="basic-addon1">@email</span>
+          </div>
+          <%= text_field_tag 'email', @user.email, class: "form-control", placeholder: "jerry@duckduckbirdie.com" %><br>
+        </div>
+        <small id="emailHelp" class="form-text text-danger">* Make sure to provide at least a name to create a valid user</small>
+        <br>
+      </div>
+      <div class="d-flex align-items-center">
+        <div>
+        <%= submit_tag 'Submit', class: 'btn btn-outline-primary btn-lg' %>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-6 col-sm-12 col-md-10 col-lg-8 col-xl-8'>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-light text-muted">Bio</span>
+        </div>
+        <%= text_area_tag 'bio', @user.bio, class: "form-control", 'aria-label': "bio", size: "10x5", placeholder: "wubba lubba dub dub" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+-->
+
+
+
+<!-- FORM_FOR VERSION ###########################################################################################################
+<div class="jumbotron card text-center bg-dark">
+  <h1 class='card-title text-light text-capitalize font-weight-bold'>create a brand new user</h1>
+  <p class='lead font-italic text-info'>Provide the requested information</p>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="d-flex justify-content-between">
+      <div class='col-xs-6 col-sm-10 col-md-10 col-lg-10 col-xl-10'>
         <%= form_for @user, url: {action: "create"}, method: :post, class: "form-group" do |f| %>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -19,7 +154,7 @@
           </div>
           <%= f.text_field :email, class: "form-control", placeholder: "jerry@duckduckbirdie.com" %><br>
         </div>
-        <small id="emailHelp" class="form-text text-muted">* Make sure to provide at least a name or the user won't be created</small>
+        <small id="emailHelp" class="form-text text-danger">* Make sure to provide at least a name or the user won't be created</small>
         <br>
       </div>
       <div class="d-flex align-items-center">
@@ -37,52 +172,6 @@
       </div>
       <% end %>
     </div>
-  </div>
-</div>
-
-<!-- FORM TAGS
-<%= form_tag url_for(action: 'create'), method: 'post' do %>
-    <%= label_tag "Name" %>
-    <%= text_field_tag 'name', @user.username %><br>
-    <%= label_tag "eMail" %>
-    <%= text_field_tag 'email', @user.email %><br>
-    <%= label_tag "Bio" %>
-    <%= text_area_tag 'bio', @user.bio, size: "30x10" %><br>
-    <%= submit_tag 'Submit' %>
-<% end %>
- d-flex justify-content-center
- justify-content-lg-center
-row col align-self-center
- row justify-content-center
--->
-
-<!-- FORM NORMAL
-<form action='/create/' method='POST'>
-  <fieldset>
-    <legend>User information</legend>
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <label for='name'>Name:</label>
-    <input id='name' type='text' name='name'><br>
-    <label for='email'>email:</label>
-    <input id='email' type='text' name='email'><br>
-    <label for='bio'>Bio:</label>
-    <textarea id='bio' name='bio' rows='10' cols='50'></textarea>
-    <input type='submit' value='submit'>
-  </fieldset>
-</form>
-
-
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">@</span>
-  </div>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-    <span class="input-group-text" id="basic-addon2">@example.com</span>
   </div>
 </div>
 -->
